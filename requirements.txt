@@ -1,0 +1,12 @@
+-e .
+
+# Tooling
+pytest==5.*
+pytest-asyncio
+uvicorn==0.11.*
+trustme==0.6.*
+
+# Linting
+black
+flake8
+mypy

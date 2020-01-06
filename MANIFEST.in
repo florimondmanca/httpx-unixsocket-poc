@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include httpx_unixsocket_poc/py.typed
