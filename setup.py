@@ -1,5 +1,7 @@
 from setuptools import find_packages, setup
 
+HTTPX_REMOTE = "https://github.com/florimondmanca/httpx.git"
+HTTPX_TAG = "archive/third-parties-connections"
 
 setup(
     name="httpx-unixsocket-poc",
@@ -9,11 +11,6 @@ setup(
     packages=find_packages(),
     python_requires=">=3.7",
     include_package_data=True,
-    install_requires=[
-        "httpx @ "
-        "git+https://github.com/encode/httpx.git@connectionpool-third-parties"
-        "#egg=httpx",
-        "sniffio",
-    ],
+    install_requires=[f"httpx @ git+{HTTPX_REMOTE}@{HTTPX_TAG}#egg=httpx", "sniffio"],
     classifiers=["Private :: Do Not Upload", "Development Status :: 7 - Inactive"],
 )
